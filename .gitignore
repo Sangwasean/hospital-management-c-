@@ -1,0 +1,106 @@
+# CLion IDE specific files
+.idea/
+cmake-build-*/
+cmake-build-debug/
+cmake-build-release/
+
+# Compiled Object files
+*.o
+*.obj
+*.ko
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Executables
+*.exe
+*.out
+*.app
+hospital_management_system  # Your executable name
+
+# CMake build files
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+
+# CLion run configurations
+*.run
+
+# QtCreator files
+*.user
+*.creator
+*.config
+*.files
+*.includes
+
+# MacOS
+.DS_Store
+._*
+
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Backup files
+*~
+*.bak
+*.swp
+*.swo
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Testing
+test_results/
+*.gcda
+*.gcno
+*.gcov
+
+# Documentation
+docs/_build/
+docs/_static/
+docs/_templates/
+
+# Package Files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Python cache (if you have any Python scripts)
+__pycache__/
+*.py[cod]
+
+# Local development environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# CLion remote development
+.remote/
