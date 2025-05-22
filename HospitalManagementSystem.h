@@ -5,6 +5,7 @@
 #include "Doctor.h"
 #include "Patient.h"
 #include "Appointment.h"
+#include "Logger.h"
 #include <vector>
 
 class HospitalManagementSystem {
@@ -13,6 +14,7 @@ private:
     std::vector<Doctor> doctors;
     std::vector<Patient> patients;
     std::vector<Appointment> appointments;
+    Logger logger;
 
     bool hospitalExists(const std::string& id) const;
     bool doctorExists(const std::string& id) const;
@@ -39,6 +41,7 @@ public:
     Hospital* findHospitalByName(const std::string& name);
     Doctor* findDoctorByName(const std::string& name);
     Patient* findPatientByName(const std::string& name);
+    HospitalManagementSystem() : logger("hospital_log.csv") {}
 };
 
 #endif

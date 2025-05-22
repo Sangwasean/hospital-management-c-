@@ -56,6 +56,10 @@ void HospitalManagementSystem::createHospital() {
 
     hospitals.emplace_back(id, name, location, specializations);
     cout << "Hospital created successfully!\n";
+
+    std::ostringstream details;
+    details << "Name: " << name << ", Location: " << location;
+    logger.log("CREATE", "HOSPITAL", id, details.str());
 }
 
 void HospitalManagementSystem::createDoctor() {
@@ -96,6 +100,11 @@ void HospitalManagementSystem::createDoctor() {
 
     doctors.emplace_back(id, name, hospitalId, hospital->getName(), specialization);
     cout << "Doctor created successfully!\n";
+
+    std::ostringstream details;
+    details << "Name: " << name << ", Hospital: " << hospital->getName()
+            << ", Specialization: " << specialization;
+    logger.log("CREATE", "DOCTOR", id, details.str());
 }
 
 void HospitalManagementSystem::createPatient() {
@@ -136,6 +145,13 @@ void HospitalManagementSystem::createPatient() {
 
     patients.emplace_back(id, name, dob, hospitalId);
     cout << "Patient created successfully!\n";
+
+    std::ostringstream details;
+    details << "Patient: " << name << ", Hospital: " << findHospital(hospitalId)->getName()
+            << ", Date: " << dob;
+    logger.log("CREATE", "PATIENT", id, details.str());
+
+
 }
 
 void HospitalManagementSystem::createAppointment() {
@@ -197,6 +213,11 @@ void HospitalManagementSystem::createAppointment() {
 
     appointments.emplace_back(id, patient->getId(), hospitalId, doctor->getId(), date);
     cout << "Appointment created successfully!\n";
+
+    std::ostringstream details;
+    details << "Patient: " << patientName << ", Doctor: " << doctorName
+            << ", Date: " << date;
+    logger.log("CREATE", "APPOINTMENT", id, details.str());
 }
 
 // DISPLAY FUNCTIONS

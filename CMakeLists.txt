@@ -13,4 +13,6 @@ add_executable(hospital_management_system main.cpp
         Hospital.h
         Hospital.cpp
         HospitalManagementSystem.cpp
-        HospitalManagementSystem.h)
+        HospitalManagementSystem.h
+        Logger.cpp
+        Logger.h)
